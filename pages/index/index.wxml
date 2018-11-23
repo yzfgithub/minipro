@@ -1,0 +1,17 @@
+<include src="../common/common.wxml" />
+<view class='xianzhi'>
+  <view>
+    <image src='../../images/zuo.png' class='zuo'></image>
+    <view class='wenan'>仅限<label>新用户</label>领取</view>
+    <image src='../../images/you.png' class='you'></image>
+  </view>
+</view>
+<view class='duihuanDiv'>
+  <view class='duihuanma'>
+  <input placeholder-class="ma"  maxlength="8" bindinput ="dhmInput" bindfocus="focusInput" placeholder="请输入兑换码" value="{{secret}}" name="secret"></input>
+</view>
+<view class='err_msg' style='visibility:{{show}}'>{{textValue}}</view>
+<view class='sure' bindtap="exchange">兑换福利</view>
+</view>
+<view class='zixun'>*本活动仅限快陪练新用户。已注册快陪练的用户可参与
+快陪练其他互动活动，详询您的课程顾问老师。</view>

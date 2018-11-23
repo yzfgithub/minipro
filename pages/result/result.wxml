@@ -1,0 +1,15 @@
+<include src="../common/common.wxml" />
+<view class='success'>
+  <view>
+    <image src='../../images/zuo.png' class='zuo'></image>
+    <view class='wenan'>领取成功</view>
+    <image src='../../images/you.png' class='you'></image>
+  </view>
+</view>
+<view class='lianxi'>
+  <view>快陪练的课程顾问稍后会与您电话联系</view>
+  <view>预约钢琴陪练课时间</view>
+  <view>请您留意010开头的座机</view>
+</view>
+<view class='zixun'>*本活动仅限快陪练新用户。已注册快陪练的用户可参与
+快陪练其他互动活动，详询您的课程顾问老师。</view>

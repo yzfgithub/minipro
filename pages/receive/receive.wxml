@@ -1,0 +1,152 @@
+<include src="../common/common.wxml" />
+<view class=''>
+	<view class='free_receive'>领取<text>练琴福利</text></view>
+  <view class='lingqu_people'>当前已有<text>57869</text>人领取</view>
+   <view class='mobile'>
+   <input placeholder-class="phone-num" type="number" maxlength="11" bindfocus='mobileFocus' bindinput ="mobileInput" placeholder="请输入您的手机号" focus="{{phone_focus}}" name="mobile" value="{{mobile}}"></input> 
+   </view>
+   <view class='err_msg'>
+    <text>{{mobile_err}}</text>
+   </view>
+   <view class='receive'>
+    <view plain='false' bindtap="showDialogBtn">立即领取</view>
+   </view>
+   <view class='xieyi'>
+   <text>快陪练保证每位用户的信息安全</text>
+   </view>
+   <view class='tishi'>
+    <image src='../../images/down_img.png'></image>
+   </view>
+   <view class='get_gift'>
+    <view class='get_giftcard'>
+      <image src='../../images/card_sale.png'></image>
+    </view>
+    <view class='header'><text>您将获得</text></view>
+    <view class='title'>
+        <text class='style'>. 大礼包中包含快陪练课两节，价值300元</text>
+    </view>
+    <view class='shuoming'>
+    <text>*本活动仅限快陪练新用户。已注册快陪练的用户可参与快陪练其他互动活动，详询您的课程顾问老师。</text>
+    </view>
+   </view>
+   <!-- 轮播图 -->
+    <view class='category'>
+    <view class='img'>
+        <image src='../../images/zu_67@2x.png'></image>
+    </view>
+    <view class='title'><text>快陪练的教学特点</text></view>
+    <view class='video-box'>
+    <view class="box" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"
+    >
+    <view class="item item0 club" animation="{{animation1}}" style='z-index:{{zindex[0]}};opacity:{{opacities[0]}};'>
+            <image style='width:{{imgWidth}}' src='{{movies[0].url}}'></image>
+            <view class='sty_1'>
+              <view class='sty_2'>{{movies[0].title}}</view>
+              <view class='sty_3'>{{movies[0].str_1}}</view>
+              <view class='sty_3'>{{movies[0].str_2}}</view>
+            </view>
+          </view>
+          <view class=" item item1 club" animation="{{animation2}}" style='z-index:{{zindex[1]}};opacity:{{opacities[1]}};'>
+            <image style='width:{{imgWidth}}' src='{{movies[1].url}}'></image>
+            <view class='sty_1'>
+              <view class='sty_2'>{{movies[1].title}}</view>
+              <view class='sty_3'>{{movies[1].str_1}}</view>
+              <view class='sty_3'>{{movies[1].str_2}}</view>
+            </view>
+          </view>
+          <view class="item item2 club" animation="{{animation3}}" style='z-index:{{zindex[2]}};opacity:{{opacities[2]}};'>
+            <image style='width:{{imgWidth}}' src='{{movies[2].url}}'></image>
+            <view class='sty_1'>
+              <view class='sty_2'>{{movies[2].title}}</view>
+              <view class='sty_3'>{{movies[2].str_1}}</view>
+              <view class='sty_3'>{{movies[2].str_2}}</view>
+            </view>
+          </view>
+          <view class="item item3 club" animation="{{animation4}}" style='z-index:{{zindex[3]}};opacity:{{opacities[3]}};'>
+            <image style='width:{{imgWidth}}' src='{{movies[3].url}}'></image>
+            <view class='sty_1'>
+              <view class='sty_2'>{{movies[3].title}}</view>
+              <view class='sty_3'>{{movies[3].str_1}}</view>
+              <view class='sty_3'>{{movies[3].str_2}}</view>
+            </view>
+          </view>
+          <view class='btn_l'>
+            <view class='btnz' bindtap="goPre">
+              <image src='../../images/zuoluanbo@3x.png'></image>  
+            </view>
+          </view>
+          <view class='btn_r'>
+            <view class='btny'  bindtap="goNext">
+              <image src='../../images/youluobo@3x.png'></image>
+            </view>
+          </view>
+
+        
+    </view>
+    </view>
+    <view class='tabs'>
+            <view class='pogation-btn'>
+                  <view class="tab {{curPos==0?'active':''}}"></view>
+                  <view class="tab {{curPos==1?'active':''}}"></view>
+                  <view class="tab {{curPos==2?'active':''}}"></view>
+                  <view class="tab {{curPos==3?'active':''}}"></view>
+            </view>
+          </view>
+  </view>
+   <view class='video' wx:if='{{!showVideo}}'>
+   <image class='kaishu' src='../../images/kaishu_bg.png'></image>
+    <view class='title'><text>凯叔推荐</text></view>
+    <view class='play_video'>
+      <image bindtap='showPlay' src='../../images/bofang@3x.png'></image>
+    </view>
+    <view class='jieshao'>
+      <view class="zhuming"><text>著名儿童教育品牌凯叔讲故事创始人</text></view>
+      <view class="zhuming"><text>“凯叔”推荐，名气大，有保障！</text></view>
+    </view>
+    
+   </view>
+   <view class='myvideo' wx:if='{{showVideo}}'>
+     <video id="myVideo" src="https://prd-kpl.oss-cn-shanghai.aliyuncs.com/coach/11520.MP4" enable-danmu danmu-btn controls></video>
+    </view>
+      <view class='chengnuo'>
+      <image class='bg' src='../../images/chengnuo_bg.png'></image>
+      <text class='title'>我们的承诺</text>
+      <view class='baozhang_1'>
+          <view class='baozhang'>
+          <image src='../../images/shizi_85@2x.png'></image>
+              <!-- <image src='../../images/zu_58@2x.png'></image> -->
+              <!-- <text>专业的师资保障</text> -->
+          </view>
+          <view class='describe'>
+            <text>平均从69位老师中挑选1位，教导孩子提升快</text>
+          </view>
+      </view>
+      <view class='baozhang_2'>
+          <view class='baozhang'>
+              <!-- <image src='../../images/zu_56@2x.png'></image> -->
+              <!-- <text>3对1专属服务</text> -->
+              <image src='../../images/fuwu_85@2x.png'></image>
+          </view>
+          <view class='describe'>
+            <text>1对1服务体系，定期反馈孩子6项数据，进步看得见</text>
+          </view>
+      </view>
+      <view class='baozhang_3'>
+          <view class='baozhang'>
+              <!-- <image src='../../images/zu_57@2x.png'></image> -->
+              <!-- <text>随时退款承诺</text> -->
+              <image src='../../images/tuikuan_85@2x.png'></image>
+          </view>
+          <view class='describe'>
+            <text>如果您上课过程中有任何不满意，可随时提出退款</text>
+          </view>
+      </view>
+   </view>
+   <view class='footer'>
+    <view class='phone'><text>联系电话：400-0166-123</text></view>
+    <view class='other'><text>快陪练隶属于北京未来橙网络科技有限公司</text></view>
+    <view class='other'><text>公司地址：北京市朝阳区福码大厦B座9层</text></view>
+    <view class='other'><text>版权所有：北京未来橙网络科技有限公司</text></view>
+    <view class='icp'><text>京ICP备 18006873 号-3</text></view>
+   </view>
+</view>

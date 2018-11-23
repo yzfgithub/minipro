@@ -1,0 +1,79 @@
+page{
+  height:100%;
+  background: #fff1e4;
+}
+.xianzhi{
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  margin-top: 72rpx;
+}
+.xianzhi image{
+  width: 28rpx;
+  height: 30rpx;
+}
+.xianzhi>view{
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: flex-start;
+}
+.xianzhi label{
+  font-size: 60rpx;
+  color: #FF604B;
+  margin: 0 10rpx;
+}
+.zuo{
+  margin-right: 16rpx;
+}
+.you{
+  margin-left: 16rpx;
+}
+.wenan{
+  font-size: 44rpx;
+  color: #1F1F1F;
+}
+.duihuanDiv{
+  width: 592rpx;
+  margin: 76rpx auto auto auto;
+}
+.duihuanma{ 
+  height: 91rpx;
+  border-radius:46rpx;
+  background: #fff;
+  margin: 0 auto 6rpx auto;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+}
+.duihuanma input, .ma{
+  color: #AEAEAE;
+  font-size: 30rpx;
+}
+.duihuanma input{
+  margin-left: 50rpx;
+}
+.err_msg{
+  font-size: 22rpx;
+  color: #F75631;
+  margin-bottom: 6rpx;
+  margin-left: 15rpx;
+}
+.sure{
+  font-size: 40rpx;
+  width: 592rpx;
+  height: 100rpx;
+  background: #F75631;
+  border-radius:50rpx;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  line-height: 100rpx;
+}
+.zixun{
+  width: 518rpx;
+  color: #CCCCCC;
+  font-size: 20rpx;
+  margin: 40rpx auto 0 auto;
+}
